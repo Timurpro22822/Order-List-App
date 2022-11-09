@@ -1,0 +1,15 @@
+.order-item {
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid darkgrey;
+    margin-bottom: 5px;
+}
+
+.order-item:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+.item-done {
+    background-color: lightseagreen;
+}

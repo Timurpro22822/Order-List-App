@@ -1,0 +1,15 @@
+<!-- One-way binding: interpolation ({{value}}) -->
+<!-- Pipes: uppercase, lowercase, date, percent ... (value | pipe) -->
+<!-- Structual Directives: *ngIf, *ngFor, *ngSwitch -->
+<!-- Attribute directives: [ngClass]='condition ? classA : classB, [class.name]='condition'' -->
+<!-- Events: click, move ((event)="handler()") -->
+
+<div *ngIf="!items || items.length == 0">
+    <p>No elements!</p> 
+</div>
+<div *ngFor="let item of items" class="order-item" [class.item-done]="item.delivered" (click)="done(item)">
+    <p>Name: {{item.name}}</p>
+    <p>Price: ${{item.price}}</p>
+    <p>Date: {{item.date | date: 'medium'}}</p>
+    <p>Delivered: {{item.delivered ? "Yes" : "No"}} </p>
+</div>
