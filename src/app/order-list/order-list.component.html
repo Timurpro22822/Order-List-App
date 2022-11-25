@@ -1,8 +1,30 @@
 <!-- One-way binding: interpolation ({{value}}) -->
+<!-- Two-way binding: [(ngModel)]="property" -->
 <!-- Pipes: uppercase, lowercase, date, percent ... (value | pipe) -->
 <!-- Structual Directives: *ngIf, *ngFor, *ngSwitch -->
 <!-- Attribute directives: [ngClass]='condition ? classA : classB, [class.name]='condition'' -->
 <!-- Events: click, move ((event)="handler()") -->
+
+<h1>Create New Product</h1>
+<div class="create-form-block">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input [(ngModel)]="currentItem.name" matInput type="text">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input [(ngModel)]="currentItem.price" matInput type="number">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input [(ngModel)]="currentItem.date" matInput type="date">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-checkbox [(ngModel)]="currentItem.delivered" color="primary" class="example-margin">Delivered</mat-checkbox>
+    <button (click)="create()" mat-raised-button color="primary">Create</button>
+</div>
 
 <h1>Order List</h1>
 <div class="main-block">

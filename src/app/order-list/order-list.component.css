@@ -16,3 +16,8 @@
 .main-block {
     margin: 0 5px 0 5px;
 }
+.create-form-block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

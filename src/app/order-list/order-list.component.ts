@@ -10,9 +10,21 @@ import { IOrderItem } from './order-item';
 })
 export class OrderListComponent {
 
+  currentItem: IOrderItem = {
+    name : "",
+    price : 0,
+    date : new Date(),
+    delivered : false
+  }
   items: IOrderItem[] = ORDERS;
 
   constructor() { }
+
+  create(): void {
+    console.log("Created!");
+
+    this.items.push({ ...this.currentItem })
+  }
 
   done(item: IOrderItem): void {
     item.delivered = true;
