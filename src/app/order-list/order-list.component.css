@@ -13,3 +13,6 @@
 .item-done {
     background-color: lightseagreen;
 }
+.main-block {
+    margin: 0 5px 0 5px;
+}
