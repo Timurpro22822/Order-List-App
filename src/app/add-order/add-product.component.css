@@ -1,15 +1,12 @@
-.indent-div {
-    margin-left: 35px;
-    
+.main-div {
+    max-width: 50%;
+    margin: auto;
 }
+
 h1 {
-    display: flex;
-    margin-left: 10px;
+    margin: 10px;
 }
 form {
     display: flex;
     flex-direction: column;
-}
-.example-full-width {
-    max-width: 200px;
 }
